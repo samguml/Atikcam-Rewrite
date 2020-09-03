@@ -2,7 +2,7 @@
 @file main.h
 @Author: Samuel Gregory (samuel_gregory@student.uml.edu)
 @brief Includes all headers that flightcam_v2-edited.cpp needs to run
-@Data 9/3/2020
+@Date 9/3/2020
 
 @copyright Copyright (c) 2020
 
