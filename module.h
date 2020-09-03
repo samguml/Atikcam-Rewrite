@@ -7,7 +7,7 @@
 @copyright Copyright (c) 2020
 
 **/
-
+#include <module_iface.c>
 #include <iostream>
 #include <fstream>
 #include <cstdlib>
