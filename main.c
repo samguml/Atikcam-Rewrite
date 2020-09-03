@@ -14,3 +14,12 @@
 #include <errno.h>
 #include <pthread.h>
 #include <signal.h>
+
+static AtikCamera *devices[MAX] ;
+bool gpio_status;
+volatile sig_atomic_t done = 0 ; //global interrupt handler
+volatile bool ccdoverheat = false ; //global ccd temperature status
+volatile unsigned long long camofftime = INFINITY ;
+double minShortExposure = -1 ;
+double maxShortExposure = -1 ;
+
