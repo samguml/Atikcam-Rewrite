@@ -7,3 +7,10 @@
 @copyright Copyright (c) 2020
 
 **/
+#include <main.h>
+#include <modules.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <errno.h>
+#include <pthread.h>
+#include <signal.h>
