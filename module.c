@@ -8,4 +8,19 @@
 
 **/
 
+//
 #include <module.h>
+
+
+//allocating memory for the cross-module variables in this file [static]
+static AtikCamera *devices[MAX] ;
+
+//Declaration of all routines 
+
+void convert_to_packet(image * a , datavis_p * b)
+
+void term (int signum)
+
+void overheat(int signum)
+  
+  
