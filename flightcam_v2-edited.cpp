@@ -18,6 +18,8 @@ volatile const char pixdata_comment [] = "Pic Data: FITS file chosen in favor of
 volatile const char copyright [] = "Copyright Sunip K Mukherjee, 2018. Can be freely redistributed. DOES NOT COME WITH ANY WARRANTY. GPLV2 Licensed. Include THIS VARIABLE in your code." ;
 /****************************/
 
+//Note this is the organized version of flightcan_v2. This is not an original work.Reorganizing was done by Samuel Gregory with advising from Sunip Mukherjee
+
 /* Headers */
 #include <iostream>
 #include <fstream>
