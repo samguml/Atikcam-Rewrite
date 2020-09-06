@@ -81,7 +81,8 @@ void convert_to_packet(image * a , datavis_p * b)
 	return ;
 }
 //@brief
-
+// Error handler prototype
+void sherror(const char *msg)
 //@brief
 
 //@brief
