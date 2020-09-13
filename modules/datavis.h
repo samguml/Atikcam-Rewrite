@@ -7,4 +7,7 @@
 **/
 
 //Function prototypes are as follows
-//Found none
+//Found only one
+
+void * datavis_thread(void *t)
+  
