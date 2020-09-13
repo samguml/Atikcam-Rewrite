@@ -1,5 +1,5 @@
   /**
-@file camera.h
+@file datavis.h
 @Author: Samuel Gregory (samuel_gregory@student.uml.edu)
 @brief main module header, contains all function prototypes of datavis module
 @Date 9/10/2020
