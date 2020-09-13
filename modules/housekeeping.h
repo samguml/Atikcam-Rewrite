@@ -7,5 +7,6 @@
 **/
 
 //Function prototypes are as follows
-//Note: no prototypes for functions were found, ask aabout this
+
+void * datavis_thread(void *t)
 
