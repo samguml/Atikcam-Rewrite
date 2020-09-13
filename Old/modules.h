@@ -89,23 +89,23 @@ const int num_wakeups = sizeof(wakeups) / sizeof(pthread_cond_t *);
 #endif
 
 //function prototypes
-void convert_to_packet(image * a , datavis_p * b)
-/**inline void put_data ( ostream & str , unsigned short val )
+void convert_to_packet(image * a , datavis_p * b) //in camera thread
+inline void put_data ( ostream & str , unsigned short val ) //camera+housekeepin
 inline void put_data ( ostream & str , unsigned long long int val )
 inline void put_data ( ostream & str , float val )
 inline void put_data ( ostream & str , char val )
-**/
-int save(const char *fileName , image * data)
-int save(const char *fileName, image* data)
-void term (int signum)
-void overheat(int signum)
-void sys_poweroff(void)
-void sys_reboot(void)
-char space_left(void)
-int compare ( const void * a , const void * b)
-unsigned long long int timenow()
-double find_optimum_exposure ( unsigned short * picdata , unsigned int imgsize , double exposure )
-bool snap_picture ( AtikCamera * device , unsigned pixX , unsigned pixY , unsigned short * data , double exposure  )
+
+int save(const char *fileName , image * data)//camera
+
+void term (int signum) //none?
+void overheat(int signum) //none
+void sys_poweroff(void)//none
+void sys_reboot(void)//caMERA
+char space_left(void)//camera
+int compare ( const void * a , const void * b)///none
+unsigned long long int timenow()//camera, housekeeping
+double find_optimum_exposure ( unsigned short * picdata , unsigned int imgsize , double exposure )//camera
+bool snap_picture ( AtikCamera * device , unsigned pixX , unsigned pixY , unsigned short * data , double exposure  )//camera
 void * camera_thread(void *t)
 void * housekeeping_thread(void *t)
 void * datavis_thread(void *t)
