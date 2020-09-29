@@ -17,6 +17,9 @@ unsigned long long int timenow()
 //again need to ask about this one
 void * housekeeping_thread(void *t)
 
-
+volatile int boardtemp , chassistemp ;
+volatile unsigned long long camofftime;
+bool cam_off;
+volatile bool ccdoverheat;
 
 
