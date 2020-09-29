@@ -5,6 +5,7 @@
 @Date 9/10/2020
 @copyright Copyright (c) 2020
 **/
+#include  <housekeeping_extern.h>
 
 //function definitions
 void convert_to_packet(image * a , datavis_p * b)
