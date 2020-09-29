@@ -4,7 +4,7 @@
 @brief: contains extern defnitons for shared variables and synchronizers between modules
 */ 
 
-#include <camera.h>
+//#include <camera.h>
 #include <pthread.h>
 
 
