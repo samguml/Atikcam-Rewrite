@@ -8,6 +8,9 @@
 
 #include <housekeeping_extern.h>
 
+#ifndef HOUSEKEEPING_H
+#define HOUSEKEEPING_H
+
 /*
 //Function prototypes are as follows
 
