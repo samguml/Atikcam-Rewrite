@@ -6,7 +6,7 @@
 
 **/
 #include <main.h>
-#include <modules.c>
+#include <modules.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <errno.h>
