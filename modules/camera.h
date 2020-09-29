@@ -4,8 +4,11 @@
 @brief main module header, contains all function prototypes of camera module
 @Date 9/10/2020
 @copyright Copyright (c) 2020
+**/
 
+#include <camera_extern.h>
 //Function prototypes are as follows
+
 
 void convert_to_packet(image * a , datavis_p * b) 
 inline void put_data ( ostream & str , unsigned short val )
