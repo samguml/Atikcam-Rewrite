@@ -6,6 +6,9 @@
 @copyright Copyright (c) 2020
 **/
 
+#ifndef DATAVIS_H
+#define DATAVIS_H
+
 //Function prototypes are as follows
 //Found only one
 
