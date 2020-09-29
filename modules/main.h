@@ -10,5 +10,6 @@
 #define MAin_H
 #endif
 
-//Signal Handler prototype 
+/*extern*/ overheat(int signum)
+//Signal Handler prototype- i think
 void term (int signum);
