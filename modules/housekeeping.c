@@ -6,40 +6,17 @@
 @copyright Copyright (c) 2020
 **/
 
-//Function prototypes are as follows
+ 
+ //Allocation of memory for cross-module vairables  
+volatile int boardtemp;
 
-inline void put_data ( ostream & str , unsigned short val )
-{
-	shb x ;
-	x.s = val ;
-	for ( char i = 0 ; i < sizeof(x.b) ; i++ )
-		str << x.b[i] ;
-}
-inline void put_data ( ostream & str , unsigned long long int val )
-{
-	llb x ;
-	x.l = val ;
-	for ( char i = 0 ; i < sizeof(x.b) ; i++ )
-		str << x.b[i] ;
-}
-inline void put_data ( ostream & str , float val )
-{
-	flb x ;
-	x.f = val ;
-	for ( char i = 0 ; i < sizeof(x.b) ; i++ )
-		str << x.b[i] ;
-}
-inline void put_data ( ostream & str , char val )
- {
-	 str << val ;
- }
+volatile int chassistemp ;
 
-unsigned long long int timenow()
-  {
-	return ((std::chrono::duration_cast<std::chrono::milliseconds> 
-	((std::chrono::time_point_cast<std::chrono::milliseconds>
-	(std::chrono::system_clock::now())).time_since_epoch())).count()) ;
-}
+volatile unsigned long long camofftime;
+
+bool cam_off;
+
+volatile bool ccdoverheat;
 
 void * housekeeping_thread(void *t)
 {   
