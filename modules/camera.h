@@ -5,6 +5,11 @@
 @Date 9/10/2020
 @copyright Copyright (c) 2020
 **/
+double minShortExposure;
+
+double maxShortExposure;
+
+unsigned pix_bin;
 
 //Function prototypes are as follows
 
