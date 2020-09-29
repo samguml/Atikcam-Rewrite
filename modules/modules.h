@@ -6,7 +6,9 @@
 @copyright Copyright (c) 2020
 **/
 
-//Note this code may be imperfect
+//#include <housekeeping_iface.h>
+//#include <camera_iface.h>
+
 
 //Register modules with init function
 
