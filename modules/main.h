@@ -5,4 +5,5 @@
 @Date 9/28/2020
 
 **/
-
+//Signal Handler prototype 
+void term (int signum);
