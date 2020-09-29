@@ -9,6 +9,8 @@
 #include <camera_extern.h>
 //Function prototypes are as follows
 
+#ifndef CAMERA_H
+#define CAMERA_H
 
 void convert_to_packet(image * a , datavis_p * b) 
 inline void put_data ( ostream & str , unsigned short val )
