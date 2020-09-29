@@ -6,7 +6,8 @@
 @copyright Copyright (c) 2020
 **/
 
- #include <housekeeping.h>
+#include <housekeeping.h>
+#include <main.h>
 
  //Allocation of memory for cross-module vairables  
 volatile int boardtemp;
