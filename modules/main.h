@@ -5,5 +5,10 @@
 @Date 9/28/2020
 
 **/
+
+#ifndef MAIN_H
+#define MAin_H
+#endif
+
 //Signal Handler prototype 
 void term (int signum);
