@@ -6,6 +6,7 @@
 @copyright Copyright (c) 2020
 **/
 #include  <camera.h>
+#include <main.h>
 
 double minShortExposure;
 
