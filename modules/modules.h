@@ -6,10 +6,13 @@
 @copyright Copyright (c) 2020
 **/
 
-//#include <housekeeping_iface.h>
-//#include <camera_iface.h>
+# include <stdio.h>
+#include <housekeeping_iface.h>
+#include <camera_iface.h>
+#include <pthread.h>
 
-
+typedef int (*init_func)(void);     // typedef to create array of init functions
+typedef void (*destroy_func)(void); // typedef to create array of destroy functions
 //Register modules with init function
 
 init_func module_init[] = {};
@@ -24,7 +27,7 @@ exit_func module_exit[] = {};
 const int num_exit = sizeof(module_exit) / sizeof(exit_func);
 
 //Register modules with exec functions 
-
+//slightly unsure of the DATAVIS parts
 void *module_exec[] = {
     
 #ifdef DATAVIS
