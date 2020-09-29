@@ -6,7 +6,7 @@
 @copyright Copyright (c) 2020
 **/
 
-
+#include <housekeeping_extern.h>
 
 /*
 //Function prototypes are as follows
