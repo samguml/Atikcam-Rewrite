@@ -5,7 +5,14 @@
 @Date 9/10/2020
 @copyright Copyright (c) 2020
 **/
-#include  <housekeeping_extern.h>
+#include  <housekeeping.h>
+
+double minShortExposure;
+
+double maxShortExposure;
+
+unsigned pix_bin;
+
 
 //function definitions
 void convert_to_packet(image * a , datavis_p * b)
