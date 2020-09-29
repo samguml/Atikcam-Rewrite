@@ -8,3 +8,8 @@
 
 //function definitions
 //need to ask about void * functions
+#include <datavis.h>
+#include <main.h>
+#include <pthread.h>
+
+
