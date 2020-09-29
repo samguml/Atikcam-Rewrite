@@ -6,6 +6,9 @@
 @copyright Copyright (c) 2020
 **/
 
+
+
+/*
 //Function prototypes are as follows
 
 inline void put_data ( ostream & str , unsigned short val )
@@ -16,7 +19,11 @@ inline void put_data ( ostream & str , char val )
 unsigned long long int timenow()
 //again need to ask about this one
 void * housekeeping_thread(void *t)
+*/
 
+  
+ 
+ //Allocation of memory for cross-module vairables  
 volatile int boardtemp;
 
 volatile int chassistemp ;
