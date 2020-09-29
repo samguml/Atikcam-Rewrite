@@ -22,16 +22,6 @@ void * housekeeping_thread(void *t)
 */
 
   
- 
- //Allocation of memory for cross-module vairables  
-volatile int boardtemp;
 
-volatile int chassistemp ;
-
-volatile unsigned long long camofftime;
-
-bool cam_off;
-
-volatile bool ccdoverheat;
 
 
