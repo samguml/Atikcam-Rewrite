@@ -8,9 +8,11 @@
 
 #ifndef DATAVIS_H
 #define DATAVIS_H
-
+#endif
 //Function prototypes are as follows
-//Found only one
+#ifndef PACK_SIZE
+#define PACK_SIZE sizeof(datavis_p)
+#endif
 
 void * datavis_thread(void *t)
   
