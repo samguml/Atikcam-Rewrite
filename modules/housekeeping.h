@@ -10,19 +10,23 @@
 
 #ifndef HOUSEKEEPING_H
 #define HOUSEKEEPING_H
+#endif
 
-/*
-//Function prototypes are as follows
 
-inline void put_data ( ostream & str , unsigned short val )
-inline void put_data ( ostream & str , unsigned long long int val )
-inline void put_data ( ostream & str , float val )
-inline void put_data ( ostream & str , char val )
+//Function prototypes
 
 unsigned long long int timenow()
-//again need to ask about this one
+ 
+inline void put_data ( ostream & str , unsigned short val ) 
+
+inline void put_data ( ostream & str , unsigned long long int val )
+
+inline void put_data ( ostream & str , float val )
+ 
+inline void put_data ( ostream & str , char val )
+
 void * housekeeping_thread(void *t)
-*/
+
 
   
 
