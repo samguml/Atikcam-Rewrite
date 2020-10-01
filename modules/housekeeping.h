@@ -15,6 +15,18 @@
 
 //Function prototypes
 
+typedef struct {
+	uint64_t tnow ; //timestamp in ms
+	float exposure ; //exposure in ms
+	unsigned short pixx ; //348
+	unsigned short pixy ; //260
+	unsigned char pixbin ;
+	short ccdtemp ; // temp in C * 100
+	short boardtemp ;
+	short chassistemp ;
+	unsigned char picdata[90480];
+} datavis_p ;
+
 unsigned long long int timenow()
  
 inline void put_data ( ostream & str , unsigned short val ) 
