@@ -8,6 +8,6 @@
 #include <pthread.h>
 
 
-extern minshortexposure;
-extern maxshortexposure;
-extern pix_bin;
+extern double  minshortexposure;
+extern double maxshortexposure;
+extern unsigned  pix_bin;
