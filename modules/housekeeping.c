@@ -20,6 +20,7 @@ bool cam_off;
 
 volatile bool ccdoverheat;
 
+
 void * housekeeping_thread(void *t)
 {   
 	ofstream tempchassis, tempboard ;
