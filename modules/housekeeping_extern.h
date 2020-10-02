@@ -7,9 +7,9 @@
 //#include <housekeeping.h>
 #include <pthread.h>
 
-extern boardtemp;
-extern chassistemp;
-extern cam_off;
-extern camofftime:
-extern ccdoverheat;
+extern volatile int boardtemp;
+extern volatile int chassistemp;
+extern bool cam_off;
+extern volatile unsigned long long camofftime:
+extern volatile bool ccdoverheat;
 
