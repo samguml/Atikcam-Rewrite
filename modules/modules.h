@@ -9,6 +9,20 @@
 #include <stdio.h>
 #include <housekeeping_iface.h>
 #include <camera_iface.h>
+#include <datavis.h>
 #include <pthread.h>
+
+
+//registers exec functions of modules
+void *module_exec[] = {
+
+camera_thread
+housekeeping_thread
+datavis_thread
+  
+};
+
+//gives # of enabled modules
+const int num_systems = sizeof(module_exec) / sizeof(void *);
 
 
