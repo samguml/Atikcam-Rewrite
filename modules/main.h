@@ -22,5 +22,5 @@ extern ofstream errlog
 extern overheat(int signum)
 
 
-//Signal Handler prototype- i think
+//Signal Handler prototype- i think or maybe it is sigaction(SIGINT, &saction, NULL);-from new error handler- will have to check
 void term (int signum);
