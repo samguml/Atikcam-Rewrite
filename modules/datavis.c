@@ -19,6 +19,8 @@ typedef struct datavis_p
 #define PACK_SIZE sizeof(datavis_p)
 #endif
 
+typedef struct sockaddr sk_sockaddr; 
+
 //routine 
 void * datavis_thread(void *t)
 {
