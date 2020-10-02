@@ -22,6 +22,7 @@ typedef struct {
 	unsigned char picdata[90480];
 } datavis_p ;
 
+typedef struct sockaddr sk_sockaddr; 
 
 //Function prototypes are as follows
 #ifndef PACK_SIZE
