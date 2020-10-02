@@ -6,15 +6,20 @@
 @copyright Copyright (c) 2020
 **/
 
-//function definitions
-//need to ask about void * functions
+
 #include <datavis.h>
 #include <main.h>
 #include <pthread.h>
 
+//function definitions
 
+typedef struct datavis_p
 
+#ifndef PACK_SIZE
+#define PACK_SIZE sizeof(datavis_p)
+#endif
 
+//routine 
 void * datavis_thread(void *t)
 {
 	int server_fd, new_socket, valread; 
