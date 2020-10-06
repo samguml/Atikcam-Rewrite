@@ -7,6 +7,8 @@
 **/
 #include  <camera.h>
 #include <main.h>
+#include <pthread.h>
+
 
 double minShortExposure;
 
