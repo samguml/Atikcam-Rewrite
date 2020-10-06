@@ -13,6 +13,11 @@
 #include <pthread.h>
 #include <signal.h>
 
+/*
+bool gpio_status;
+char curr_dir[PATH_MAX];
+*/
+
 int main ( void )
 {
 	/** Error Log **/
