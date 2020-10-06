@@ -160,3 +160,4 @@ void * housekeeping_thread(void *t)
 	gpioWrite(27,0) ;
 	#endif
     pthread_exit(NULL) ;
+}
