@@ -9,20 +9,28 @@
 #include <stdio.h>
 #include <housekeeping_iface.h>
 #include <camera_iface.h>
-#include <datavis.h>
 #include <pthread.h>
 
 
 //registers exec functions of modules
 void *module_exec[] = {
-
+#ifdef CAMERA
+    ,
 camera_thread
+#endif
+      
+#ifdef HOUSEKEEPING
+    ,
 housekeeping_thread
+ #endif
+#ifdef DATAVIS
+    ,
 datavis_thread
-  
+#endif  
 };
 
 //gives # of enabled modules
 const int num_systems = sizeof(module_exec) / sizeof(void *);
 
+//list of condition locks would go here, but I still need clarification on them
 
