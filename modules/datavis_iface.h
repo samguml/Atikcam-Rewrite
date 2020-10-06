@@ -9,6 +9,6 @@
 #ifndef DATAVIS_IFACE_H
 #define DATAVIS_IFACE_H
 #include <datavis_extern.h>
-void *datavis_thread(void *);
+//void *datavis_thread(void *);
 #endif 
 
