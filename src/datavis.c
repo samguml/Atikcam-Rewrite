@@ -11,11 +11,10 @@
 #include <main.h>
 #include <pthread.h>
 
-//function definitions
+//routine definitions
 
 typedef struct sockaddr sk_sockaddr; 
 
-//routine 
 void * datavis_thread(void *t)
 {
 	int server_fd, new_socket, valread; 
