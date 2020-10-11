@@ -36,11 +36,11 @@ inline void put_data ( ostream & str , char val )
   
 int save(const char *fileName, image* data)
  
- void sys_reboot(void)
+void sys_reboot(void)
  
-  double find_optimum_exposure ( unsigned short * picdata , unsigned int imgsize , double exposure )
+double find_optimum_exposure ( unsigned short * picdata , unsigned int imgsize , double exposure )
   
-  bool snap_picture ( AtikCamera * device , unsigned pixX , unsigned pixY , unsigned short * data , double exposure  )
+bool snap_picture ( AtikCamera * device , unsigned pixX , unsigned pixY , unsigned short * data , double exposure  )
   
 char space_left(void)
 

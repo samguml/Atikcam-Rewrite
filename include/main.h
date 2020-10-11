@@ -22,5 +22,3 @@ extern ofstream errlog
 extern overheat(int signum)
 
 
-//Signal Handler prototype- i think
-void term (int signum);

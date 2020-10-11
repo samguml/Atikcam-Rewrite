@@ -1,3 +1,27 @@
+  /**
+@file datavis.c
+@Author: Samuel Gregory (samuel_gregory@student.uml.edu)
+@brief 
+@Date 9/13/2020
+@copyright Copyright (c) 2020
+**/
+
+
+#include <datavis.h>
+#include <main.h>
+#include <pthread.h>
+
+//function definitions
+
+typedef struct datavis_p
+
+#ifndef PACK_SIZE
+#define PACK_SIZE sizeof(datavis_p)
+#endif
+
+typedef struct sockaddr sk_sockaddr; 
+
+//routine 
 void * datavis_thread(void *t)
 {
 	int server_fd, new_socket, valread; 
@@ -78,3 +102,5 @@ void * datavis_thread(void *t)
 	close(server_fd);
 	pthread_exit(NULL);
 }
+
+

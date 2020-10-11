@@ -20,6 +20,7 @@ bool cam_off;
 
 volatile bool ccdoverheat;
 
+
 void * housekeeping_thread(void *t)
 {   
 	ofstream tempchassis, tempboard ;
@@ -159,3 +160,4 @@ void * housekeeping_thread(void *t)
 	gpioWrite(27,0) ;
 	#endif
     pthread_exit(NULL) ;
+}
