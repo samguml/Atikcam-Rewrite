@@ -4,7 +4,7 @@
 @brief: contains extern definitons for shared variables and synchronizers between modules
 */ 
 
-//#include <housekeeping.h>
+#include <housekeeping.h>
 #include <pthread.h>
 
 extern volatile int boardtemp;
