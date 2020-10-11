@@ -13,8 +13,6 @@
 
 //function definitions
 
-typedef struct datavis_p;
-
 typedef struct sockaddr sk_sockaddr; 
 
 //routine 
