@@ -16,7 +16,7 @@
 
 bool gpio_status;
 char curr_dir[PATH_MAX];
-
+volatile sig_atomic_t done = 0;
 
 int main ( void )
 {
