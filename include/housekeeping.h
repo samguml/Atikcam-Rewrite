@@ -15,17 +15,14 @@
 
 //Function prototypes
 
-unsigned long long int timenow()
+unsigned long long int timenow();
  
-inline void put_data ( ostream & str , unsigned short val ) 
+inline void put_data ( ostream & str , unsigned short val ) ;
+inline void put_data ( ostream & str , unsigned long long int val );
+inline void put_data ( ostream & str , float val );
+ inline void put_data ( ostream & str , char val );
 
-inline void put_data ( ostream & str , unsigned long long int val )
-
-inline void put_data ( ostream & str , float val )
- 
-inline void put_data ( ostream & str , char val )
-
-void * housekeeping_thread(void *t)
+void * housekeeping_thread(void *t);
 
 
   
