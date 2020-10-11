@@ -22,6 +22,33 @@ bool cam_off;
 
 volatile bool ccdoverheat;
 
+inline void put_data ( ostream & str , unsigned short val )
+{
+	shb x ;
+	x.s = val ;
+	for ( char i = 0 ; i < sizeof(x.b) ; i++ )
+		str << x.b[i] ;
+}
+
+inline void put_data ( ostream & str , unsigned long long int val )
+{
+	llb x ;
+	x.l = val ;
+	for ( char i = 0 ; i < sizeof(x.b) ; i++ )
+		str << x.b[i] ;
+}
+
+inline void put_data ( ostream & str , float val )
+{
+	flb x ;
+	x.f = val ;
+	for ( char i = 0 ; i < sizeof(x.b) ; i++ )
+		str << x.b[i] ;
+}
+ inline void put_data ( ostream & str , char val )
+ {
+	 str << val ;
+ }
 
 void * housekeeping_thread(void *t)
 {   
