@@ -45,33 +45,72 @@ int main ( void )
         gpioSetMode(27,PI_OUTPUT) ; //28V Rail
     }
     #endif //RPI
-    /* Set up interrupt handler */
-    struct sigaction action[3] ;
-	memset(&action[0], 0, sizeof(struct sigaction)) ;
-	action[0].sa_handler = term ;
-    if (sigaction(SIGTERM, &action[0],NULL )<0)
+    /* Set up interrupt handler Note: This handler comes from shflight and replaced the one that was in use. It has not been fully integrated as of yet but will be*/
+    struct sigaction saction;
+    saction.sa_handler = &catch_sigint;
+    sigaction(SIGINT, &saction, NULL);
+    // initialize modules
+    for (int i = 0; i < num_init; i++)
     {
-        perror("Main: SIGTERM Handler") ;
-        cerr << "Main: SIGTERM Handler failed to install" << endl ;
-		if (errlog.good()) errlog << "Main: SIGTERM Handler failed to install, errno" << errno << endl ;
+        int val = module_init[i]();
+        if (val < 0)
+        {
+            sherror("Error in initialization!");
+            exit(-1);
+        }
     }
-	memset(&action[1], 0, sizeof(struct sigaction)) ;
-	action[1].sa_handler = term ;
-	if ( sigaction(SIGINT, &action[1],NULL ) < 0 )
+    printf("Done init modules\n");
+    // set up threads
+    int rc[num_systems];                                         // fork-join return codes
+    pthread_t thread[num_systems];                               // thread containers
+    pthread_attr_t attr;                                         // thread attribute
+    int args[num_systems];                                       // thread arguments (thread id in this case, but can be expanded by passing structs etc)
+    void *status;                                                // thread return value
+    pthread_attr_init(&attr);                                    // initialize attribute
+    pthread_attr_setdetachstate(&attr, PTHREAD_CREATE_JOINABLE); // create threads to be joinable
+
+    for (int i = 0; i < num_systems; i++)
     {
-        perror("Main: SIGINT Handler") ;
-        cerr << "Main: SIGINT Handler failed to install" << endl ;
-		if (errlog.good()) errlog << "Main: SIGINT Handler failed to install, errno" << errno << endl ;
+        args[i] = i; // sending a pointer to i to every thread may end up with duplicate thread ids because of access times
+        rc[i] = pthread_create(&thread[i], &attr, module_exec[i], (void *)(&args[i]));
+        if (rc[i])
+        {
+            printf("[Main] Error: Unable to create thread %d: Errno %d\n", i, errno);
+            exit(-1);
+        }
     }
-    memset(&action[2], 0, sizeof(struct sigaction)) ;
-	action[2].sa_handler = overheat ;
-	if ( sigaction(SIGILL, &action[2],NULL ) < 0 )
+
+    pthread_attr_destroy(&attr); // destroy the attribute
+
+    for (int i = 0; i < num_systems; i++)
     {
-        perror("Main: SIGILL Handler") ;
-        cerr << "Main: SIGILL Handler failed to install" << endl ;
-		if (errlog.good()) errlog << "Main: SIGILL Handler failed to install, errno" << errno << endl ;
+        rc[i] = pthread_join(thread[i], &status);
+        if (rc[i])
+        {
+            printf("[Main] Error: Unable to join thread %d: Errno %d\n", i, errno);
+            exit(-1);
+        }
     }
-    cerr << "Main: Interrupt handlers are set up." << endl ;
+
+    // destroy modules
+    for (int i = 0; i < num_destroy; i++)
+    {
+        module_destroy[i]();
+    }
+    return 0;
+}
+/**
+ * @brief SIGINT handler, sets the global variable `done` as 1, so that thread loops can break.
+ 
+ * 
+ * @param sig Receives the signal as input.
+ */
+void catch_sigint(int sig)
+{
+    done = 1;
+    for (int i = 0; i < num_wakeups; i++)
+        pthread_cond_broadcast(wakeups[i]);
+}
     /* End set up interrupt handler */
 
     /* Look for free space at init */
