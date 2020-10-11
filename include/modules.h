@@ -9,6 +9,7 @@
 #include <stdio.h>
 #include <housekeeping_iface.h>
 #include <camera_iface.h>
+#include <datavis_iface.h>
 #include <pthread.h>
 
 
