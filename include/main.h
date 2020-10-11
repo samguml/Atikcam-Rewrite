@@ -21,8 +21,13 @@ extern ofstream camlog ;
 extern ofstream errlog ;
 
 //extern defintion of local signal handler? 
-extern overheat(int signum)
+extern overheat(int signum);
 
 //interrupt handler for sigint
   void catch_sigint(int sig);
+
+//function prototypes from main.c
+
+void sys_poweroff(void);
+
 
