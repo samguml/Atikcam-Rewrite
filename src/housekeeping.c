@@ -23,6 +23,13 @@ bool cam_off;
 volatile bool ccdoverheat;
 
 //Routine declarations
+
+unsigned long long int timenow()
+{
+	return ((std::chrono::duration_cast<std::chrono::milliseconds> 
+	((std::chrono::time_point_cast<std::chrono::milliseconds>
+	(std::chrono::system_clock::now())).time_since_epoch())).count()) ;
+}
 inline void put_data ( ostream & str , unsigned short val )
 {
 	shb x ;
