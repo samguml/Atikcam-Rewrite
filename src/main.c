@@ -220,6 +220,7 @@ void overheat(int signum)
     return ;
 }
 
+#ifdef ENABLE_PWOFF
 void sys_poweroff(void)
 {
 	cerr << "Info: Poweroff instruction received!" << endl ;
