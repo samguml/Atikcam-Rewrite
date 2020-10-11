@@ -280,7 +280,7 @@ bool snap_picture ( AtikCamera * device , unsigned pixX , unsigned pixY , unsign
 	return success ;
 }
 
-//ask about this
+//Main routine
 void * camera_thread(void *t)
 {
     /** Atik Camera Temperature Log **/
