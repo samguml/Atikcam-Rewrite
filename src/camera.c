@@ -5,7 +5,7 @@
 @Date 9/10/2020
 @copyright Copyright (c) 2020
 **/
-#include  <camera.h>
+#include <camera.h>
 #include <main.h>
 #include <pthread.h>
 
