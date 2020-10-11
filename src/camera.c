@@ -8,6 +8,7 @@
 #include <camera.h>
 #include <main.h>
 #include <pthread.h>
+#include <housekeeping_extern.h>
 
 
 double minShortExposure;
