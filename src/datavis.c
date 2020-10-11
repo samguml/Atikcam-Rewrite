@@ -13,11 +13,7 @@
 
 //function definitions
 
-typedef struct datavis_p
-
-#ifndef PACK_SIZE
-#define PACK_SIZE sizeof(datavis_p)
-#endif
+typedef struct datavis_p;
 
 typedef struct sockaddr sk_sockaddr; 
 
