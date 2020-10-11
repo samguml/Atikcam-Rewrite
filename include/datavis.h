@@ -25,9 +25,8 @@ typedef struct {
 typedef struct sockaddr sk_sockaddr; 
 
 //Function prototypes are as follows
-#ifndef PACK_SIZE
-#define PACK_SIZE sizeof(datavis_p)
-#endif
 
-void * datavis_thread(void *t)
+
+
+void * datavis_thread(void *t);
   
