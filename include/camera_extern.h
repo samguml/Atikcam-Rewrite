@@ -1,6 +1,7 @@
 /*
 @file camera_extern.h
-@author: 9/28/20
+@author: Samuel Gregory
+@date 9/28/20
 @brief: contains extern defnitons for shared variables and synchronizers between modules
 */ 
 
