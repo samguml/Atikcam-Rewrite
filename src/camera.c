@@ -18,7 +18,7 @@ double maxShortExposure;
 unsigned pix_bin;
 
 
-//function definitions
+//routine declarations
 void convert_to_packet(image * a , datavis_p * b)
 {
 	b -> tnow = a -> tnow ;
@@ -101,13 +101,20 @@ int save(const char *fileName , image * data) {
 	#endif
   }
   
-  void sys_reboot(void)
+#ifdef ENABLE_REBOOT
+void sys_reboot(void)
 {
 	cerr << "Info: Reboot instruction received!" << endl ;
 	sync() ;
 	setuid(0) ;
 	reboot(RB_AUTOBOOT) ;
 }
+#else
+void sys_reboot(void)
+{
+	cerr << "Info: Reboot instruction received!" << endl ;
+}
+#endif //ENABLE_REBOOT
   
 char space_left(void)
 {
