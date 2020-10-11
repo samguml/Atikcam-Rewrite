@@ -13,10 +13,10 @@
 #include <pthread.h>
 #include <signal.h>
 
-/*
+
 bool gpio_status;
 char curr_dir[PATH_MAX];
-*/
+
 
 int main ( void )
 {
@@ -45,23 +45,33 @@ int main ( void )
         gpioSetMode(27,PI_OUTPUT) ; //28V Rail
     }
     #endif //RPI
-/* Set up interrupt handler 
-This signal handler has been phased out by the one used in shflight which is as follows
-*/
-    struct sigaction saction;
-    saction.sa_handler = &catch_sigint;
-    sigaction(SIGINT, &saction, NULL);
-    // initialize modules
-    for (int i = 0; i < num_init; i++)
+    /* Set up interrupt handler */
+    struct sigaction action[3] ;
+	memset(&action[0], 0, sizeof(struct sigaction)) ;
+	action[0].sa_handler = term ;
+    if (sigaction(SIGTERM, &action[0],NULL )<0)
     {
-        int val = module_init[i]();
-        if (val < 0)
-        {
-            sherror("Error in initialization!");
-            exit(-1);
-        }
+        perror("Main: SIGTERM Handler") ;
+        cerr << "Main: SIGTERM Handler failed to install" << endl ;
+		if (errlog.good()) errlog << "Main: SIGTERM Handler failed to install, errno" << errno << endl ;
     }
-
+	memset(&action[1], 0, sizeof(struct sigaction)) ;
+	action[1].sa_handler = term ;
+	if ( sigaction(SIGINT, &action[1],NULL ) < 0 )
+    {
+        perror("Main: SIGINT Handler") ;
+        cerr << "Main: SIGINT Handler failed to install" << endl ;
+		if (errlog.good()) errlog << "Main: SIGINT Handler failed to install, errno" << errno << endl ;
+    }
+    memset(&action[2], 0, sizeof(struct sigaction)) ;
+	action[2].sa_handler = overheat ;
+	if ( sigaction(SIGILL, &action[2],NULL ) < 0 )
+    {
+        perror("Main: SIGILL Handler") ;
+        cerr << "Main: SIGILL Handler failed to install" << endl ;
+		if (errlog.good()) errlog << "Main: SIGILL Handler failed to install, errno" << errno << endl ;
+    }
+    cerr << "Main: Interrupt handlers are set up." << endl ;
     /* End set up interrupt handler */
 
     /* Look for free space at init */
