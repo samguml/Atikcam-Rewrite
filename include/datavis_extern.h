@@ -15,7 +15,7 @@
 #include <pthread.h>
 
 
-
-extern sig_atomic_t done;
+//This is already defined by main.h
+//extern sig_atomic_t done;
 
 
