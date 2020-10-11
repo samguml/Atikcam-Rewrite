@@ -8,6 +8,7 @@
 
 #include <housekeeping.h>
 #include <main.h>
+#include <pthread.h>
 
  //Allocation of memory for cross-module vairables  
 volatile int boardtemp;
