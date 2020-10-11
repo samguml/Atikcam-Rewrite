@@ -10,15 +10,19 @@
 #define MAin_H
 #endif
 
+#include <signal.h>
+
 //extern definition of done (controls loops for all threads)
-extern volatile sig_atomic_t done = 0 ;
+extern volatile sig_atomic_t done;
 
 //extern definition of thread local errno/custom 
 extern ofstream templog ;
 extern ofstream camlog ;
-extern ofstream errlog 
+extern ofstream errlog ;
 
 //extern defintion of local signal handler? 
 extern overheat(int signum)
 
+//interrupt handler for sigint
+  void catch_sigint(int sig);
 
