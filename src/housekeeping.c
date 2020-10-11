@@ -22,6 +22,7 @@ bool cam_off;
 
 volatile bool ccdoverheat;
 
+//Routine declarations
 inline void put_data ( ostream & str , unsigned short val )
 {
 	shb x ;
