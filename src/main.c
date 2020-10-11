@@ -206,3 +206,31 @@ void catch_sigint(int sig)
     //pthread_exit(NULL);
     return 0 ;
 }
+
+
+void overheat(int signum)
+{
+	#ifdef RPI
+	gpioWrite(17,0);
+	#endif
+	camofftime = timenow() ;
+    ccdoverheat = true ;
+	cam_off = true ;
+    cerr << "Interrupt Handler: Received Signal: 0x" << hex << signum << dec << endl ;
+    return ;
+}
+
+void sys_poweroff(void)
+{
+	cerr << "Info: Poweroff instruction received!" << endl ;
+	sync() ;
+	setuid(0) ;
+	reboot(LINUX_REBOOT_CMD_POWER_OFF) ;
+}
+#else
+void sys_poweroff(void)
+{	
+	cerr << "Info: Poweroff instruction received!" << endl ;
+	exit(0);
+}
+#endif //ENABLE_PWOFF
