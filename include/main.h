@@ -7,7 +7,7 @@
 //Note all modules include main.h in their .c file!
 
 #ifndef MAIN_H
-#define MAin_H
+#define MAIN_H
 #endif
 
 #include <signal.h>
