@@ -1,7 +1,7 @@
 /**
 @file main.h
 @Author: Samuel Gregory 
-@brief has source code for every module. Also holds extern definitions. Would contain error printer prototype, but that feature will not be included.
+@brief Holds extern definitions of done +thread local errno. Would contain error printer prototype, but that feature has been phased out.
 @Date 9/28/2020
 **/
 //Note all modules include main.h in their .c file!
