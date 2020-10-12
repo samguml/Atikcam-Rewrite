@@ -1,7 +1,7 @@
 /*
  @file housekeeping_iface.h
  @author Samuel Gregory
- @brief housekeeping thread externs for main
+ @brief This file contains the extern prototypes for module_init, module_exec, module_exit, and pthread_cond_t for the housekeeping thread
  @date 9/28/20
  
  
