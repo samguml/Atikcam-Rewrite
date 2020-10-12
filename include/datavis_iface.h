@@ -1,7 +1,7 @@
 /*
  @file datavis_iface.h
  @author Samuel Gregory
- @brief datavis thread externs for main
+ @brief This file contains the extern prototypes for module_init, module_exec, module_exit, and pthread_cond_t for the datavis thread
  @date 10/1/20
  
  
