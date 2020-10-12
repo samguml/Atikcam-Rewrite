@@ -6,6 +6,9 @@
 @copyright Copyright (c) 2020
 **/
 
+
+#include <datavis_extern.h>
+
 #ifndef DATAVIS_H
 #define DATAVIS_H
 #endif
@@ -25,8 +28,6 @@ typedef struct {
 typedef struct sockaddr sk_sockaddr; 
 
 //Function prototypes are as follows
-
-
 
 void * datavis_thread(void *t);
   
