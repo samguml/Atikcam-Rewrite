@@ -11,7 +11,9 @@
 #include <main.h>
 #include <pthread.h>
 
-//routine definitions
+//Note: No cross-module variables to declare
+
+//routine declarations
 
 typedef struct sockaddr sk_sockaddr; 
 
