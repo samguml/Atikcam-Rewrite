@@ -4,6 +4,7 @@
 @brief provides threat init, spawn, join, destroy. Signal handler for all threads. Would contain error printer but that feature will be phased out 
 @Date 9/28/2020
 
+Note: Signal handler has been swapped out for the signal handler from the shflight repository. 
 **/
 #include <main.h>
 #include <modules.h>
