@@ -1,9 +1,9 @@
   /**
 @file datavis.c
 @Author: Samuel Gregory (samuel_gregory@student.uml.edu)
-@brief 
+@brief This file declares all routines and allocates memory for all cross-module variables in the datavis thread
 @Date 9/13/2020
-@copyright Copyright (c) 2020
+
 **/
 
 
