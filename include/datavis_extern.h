@@ -1,7 +1,7 @@
 /*
  @file datavis_extern.h
  @author Samuel Gregory
- @brief 
+ @brief extern defintions for synchronizers and variables shared across modules
  @date 10/11/20
  
  
@@ -14,8 +14,5 @@
 #include <datavis.h>
 #include <pthread.h>
 
-
-//This is already defined by main.h
-//extern sig_atomic_t done;
-
+//Could find no cross-module variables or synchronizers.
 
