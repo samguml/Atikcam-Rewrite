@@ -16,11 +16,11 @@ volatile int boardtemp;
 
 volatile int chassistemp ;
 
-volatile unsigned long long camofftime;
+volatile unsigned long long camofftime = INFINITY ;
 
-bool cam_off;
+bool cam_off = false;
 
-volatile bool ccdoverheat;
+volatile bool ccdoverheat = false;
 
 //Routine declarations
 
