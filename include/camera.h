@@ -11,7 +11,6 @@
 #ifndef CAMERA_H
 #define CAMERA_H
 #endif
-//Function prototypes are as follows
 
 typedef struct image {
 	uint64_t tnow ; 
@@ -26,6 +25,8 @@ typedef struct image {
 	unsigned char unused[6] ; 
 	unsigned char unused2[1792] ; //padding to round off to 708*4096 bytes
 } image ; //size 708*4096
+
+//Function prototypes are as follows
 
 void convert_to_packet(image * a , datavis_p * b);
 
@@ -47,7 +48,6 @@ double find_optimum_exposure ( unsigned short * picdata , unsigned int imgsize ,
 bool snap_picture ( AtikCamera * device , unsigned pixX , unsigned pixY , unsigned short * data , double exposure  );
   
 char space_left(void);
-
  
 void * camera_thread(void *t);
   
