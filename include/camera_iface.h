@@ -1,7 +1,7 @@
 /*
  @file camera_iface.h
  @author Samuel Gregory
- @brief camera thread externs for main
+ @brief: This file contains the extern prototypes for module_init, module_exec, module_exit, and pthread_cond_t
  @date 9/28/20
  
  
