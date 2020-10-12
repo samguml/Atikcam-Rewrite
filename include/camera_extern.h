@@ -7,8 +7,12 @@
 
 #include <camera.h>
 #include <pthread.h>
-
+#ifndef CAMERA_EXTERN_H
+#define CAMERA_EXTERN_H
+#endif
 
 extern double  minshortexposure;
+
 extern double maxshortexposure;
+
 extern unsigned  pix_bin;
