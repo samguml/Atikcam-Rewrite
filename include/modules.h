@@ -1,9 +1,8 @@
 /**
 @file modules.h
 @Author: Samuel Gregory (samuel_gregory@student.uml.edu)
-@brief 
+@brief Includes the various module functions 
 @Date 9/12/2020
-@copyright Copyright (c) 2020
 **/
 
 #include <stdio.h>
@@ -33,5 +32,5 @@ datavis_thread
 //gives # of enabled modules
 const int num_systems = sizeof(module_exec) / sizeof(void *);
 
-//list of condition locks would go here, but I still need clarification on them
+//list of condition locks would go here, but this part of modules.h is still in development
 
