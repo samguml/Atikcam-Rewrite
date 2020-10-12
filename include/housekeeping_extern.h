@@ -11,6 +11,8 @@
 #define HOUSEKEEPING_EXTERN_H
 #endif
 
+//extern defintions for shared variables 
+
 extern volatile int boardtemp;
 
 extern volatile int chassistemp;
