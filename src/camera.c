@@ -11,11 +11,11 @@
 #include <housekeeping_extern.h>
 //#include <datavis_extern.h>
 
-double minShortExposure;
+double minShortExposure = -1 ;
 
-double maxShortExposure;
+double maxShortExposure = -1;
 
-unsigned pix_bin;
+unsigned pix_bin  = PIX_BIN;
 
 
 //routine declarations
