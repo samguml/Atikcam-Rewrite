@@ -11,6 +11,8 @@
 #include <datavis_iface.h>
 #include <pthread.h>
 
+//Note: No module_exit or module_init functions were found 
+
 
 //registers exec functions of modules
 void *module_exec[] = {
