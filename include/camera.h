@@ -6,11 +6,11 @@
 @copyright Copyright (c) 2020
 **/
 
+
+#ifndef _CAMERA_H
+#define _CAMERA_H
 #include <camera_extern.h>
 
-#ifndef CAMERA_H
-#define CAMERA_H
-#endif
 
 typedef struct image {
 	uint64_t tnow ; 
@@ -52,3 +52,4 @@ char space_left(void);
 void * camera_thread(void *t);
   
   
+#endif //_CAMERA_H
