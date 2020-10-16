@@ -10,5 +10,5 @@
 #define DATAVIS_IFACE_H
 #include <datavis_extern.h>
  void *datavis_thread(void *);
-#endif 
+#endif //DATAVIS_IFACE_H
 
