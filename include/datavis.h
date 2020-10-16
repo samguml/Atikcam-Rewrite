@@ -6,12 +6,9 @@
 @copyright Copyright (c) 2020
 **/
 
-
+#ifndef _DATAVIS_H
+#define _DATAVIS_H
 #include <datavis_extern.h>
-
-#ifndef DATAVIS_H
-#define DATAVIS_H
-#endif
 
 typedef struct {
 	uint64_t tnow ; //timestamp in ms
@@ -31,3 +28,4 @@ typedef struct sockaddr sk_sockaddr;
 
 void * datavis_thread(void *t);
   
+#endif //_DATAVIS_H
