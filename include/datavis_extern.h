@@ -5,14 +5,15 @@
  @date 10/11/20
  
  
- 
+ Note: This file is still needs more work than most
  */
 #ifndef DATAVIS_EXTERN_H
 #define DATAVIS_EXTERN_h
-#endif
+
 
 #include <datavis.h>
 #include <pthread.h>
 
 //Could find no cross-module variables or synchronizers.
 
+#endif //DATAVIS_EXTERN_H
