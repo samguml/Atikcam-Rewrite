@@ -10,6 +10,6 @@
 #define CAMERA_IFACE_H
 #include <camera_extern.h>
 void *camera_thread(void *);
-#endif 
+#endif //CAMERA_IFACE_H
 
 
