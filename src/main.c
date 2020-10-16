@@ -6,8 +6,10 @@
 
 Note: Signal handler has been swapped out for the signal handler from the shflight repository. 
 **/
+#define MAIN_PRIVATE
 #include <main.h>
 #include <modules.h>
+#undefine MAIN_PRIVATE
 #include <stdio.h>
 #include <stdlib.h>
 #include <errno.h>
