@@ -8,7 +8,7 @@
 
 #ifndef MAIN_H
 #define MAIN_H
-#endif
+
 
 #include <signal.h>
 
@@ -30,4 +30,4 @@ extern overheat(int signum);
 
 void sys_poweroff(void);
 
-
+#endif //MAIN_H
