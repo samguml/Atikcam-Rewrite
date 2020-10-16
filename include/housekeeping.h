@@ -6,11 +6,10 @@
 @copyright Copyright (c) 2020
 **/
 
+#ifndef _HOUSEKEEPING_H
+#define _HOUSEKEEPING_H
 #include <housekeeping_extern.h>
 
-#ifndef HOUSEKEEPING_H
-#define HOUSEKEEPING_H
-#endif
 
 
 //Function prototypes
@@ -24,7 +23,7 @@ inline void put_data ( ostream & str , char val );
 
 void * housekeeping_thread(void *t);
 
-
+#endif //_HOUSEKEEPING_h
   
 
 
