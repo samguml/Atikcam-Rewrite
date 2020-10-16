@@ -7,8 +7,8 @@
 
 #include <stdio.h>
 
-#ifndef MODULES_H
-#define MODULES_H
+#ifndef _MODULES_H
+#define _MODULES_H
 #ifdef MAIN_PRIVATE
 #include <housekeeping_iface.h>
 #include <camera_iface.h>
@@ -41,5 +41,5 @@ const int num_systems = sizeof(module_exec) / sizeof(void *);
 
 //list of condition locks would go here, but this part of modules.h is still in development
 
-#endif //#define MAIN_PRIVATE
-#endif  //#define MODULES_H
+#endif //#define _MAIN_PRIVATE
+#endif  //#define _MODULES_H
