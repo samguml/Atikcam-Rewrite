@@ -7,11 +7,12 @@
 
 //Note:this software is still subject to change-macros.h is one of the files not mentioned in the desgin pdf
 
-#include <stdio.h>
 
 #ifndef _MACROS_H
 #define _MACROS_H
-#endif
+
+
+#include <stdio.h>
 
 
 //Global Macros
@@ -128,4 +129,4 @@ void sys_reboot(void)
 }
 #endif //ENABLE_REBOOT
 
-
+#endif //_MACROS_H
