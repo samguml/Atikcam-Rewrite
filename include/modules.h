@@ -6,10 +6,13 @@
 **/
 
 #include <stdio.h>
+
+#ifdef MAIN_PRIVATE
 #include <housekeeping_iface.h>
 #include <camera_iface.h>
 #include <datavis_iface.h>
 #include <pthread.h>
+
 
 //Note: No module_exit or module_init functions were found 
 
@@ -36,3 +39,4 @@ const int num_systems = sizeof(module_exec) / sizeof(void *);
 
 //list of condition locks would go here, but this part of modules.h is still in development
 
+#endif //#define MAIN_PRIVATE
