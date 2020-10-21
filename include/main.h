@@ -11,9 +11,7 @@
 
 
 #include <signal.h>
-#include <camera_iface.h>
-#include <datavis_iface.h>
-#include <housekeeping_iface.h>
+
 
 //extern definition of done (controls loops for all threads)
 extern volatile sig_atomic_t done;
