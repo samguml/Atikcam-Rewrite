@@ -14,6 +14,6 @@
 #include <datavis.h>
 #include <pthread.h>
 
-//Could find no cross-module variables or synchronizers.
+//There are no cross-module variables used by the datavis thread
 
 #endif //DATAVIS_EXTERN_H
