@@ -16,7 +16,7 @@
 #include <pthread.h>
 
 
-//Note: No module_exit or module_init functions were found 
+//Note: No module_exit or module_init functions are present
 
 
 //registers exec functions of modules
