@@ -39,7 +39,7 @@ datavis_thread
 //gives # of enabled modules
 const int num_systems = sizeof(module_exec) / sizeof(void *);
 
-//list of condition locks would go here, but this part of modules.h is still in development
+//list of condition locks would go here, but no conditional wake-ups are in use by the program
 
 #endif //#define _MAIN_PRIVATE
 #endif  //#define _MODULES_H
