@@ -9,7 +9,7 @@
 #include <main.h>
 #include <pthread.h>
 #include <housekeeping_extern.h>
-//#include <datavis_extern.h>
+
 
 double minShortExposure = -1 ;
 
