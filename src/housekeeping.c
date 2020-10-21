@@ -9,7 +9,8 @@
 #include <housekeeping.h>
 #include <main.h>
 #include <pthread.h>
-//#include <datavis_extern.h>
+#include <camera_extern.h>
+
 
  //Allocation of memory for cross-module vairables  
 volatile int boardtemp;
