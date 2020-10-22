@@ -11,7 +11,6 @@
 #define DATAVIS_EXTERN_h
 
 #include <datavis.h>
-#include <pthread.h>
 
 //There are no cross-module variables used by the datavis thread
 
