@@ -13,7 +13,7 @@
 #include <housekeeping_iface.h>
 #include <camera_iface.h>
 #include <datavis_iface.h>
-#include <pthread.h>
+//#include <pthread.h>
 
 
 //Note: No module_exit or module_init functions are present
