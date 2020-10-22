@@ -11,6 +11,7 @@
 
 
 #include <signal.h>
+#include <fstream.h>//
 
 
 //extern definition of done (controls loops for all threads)
