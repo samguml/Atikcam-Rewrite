@@ -8,7 +8,7 @@
  */
 #ifndef HOUSEKEEPING_IFACE_H
 #define HOUSEKEEPING_IFACE_H
-#include <housekeeping_extern.h>
+
  void *housekeeping_thread(void *);
 #endif //HOUSEKEEPING_IFACE_H
 
