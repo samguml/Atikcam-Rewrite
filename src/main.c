@@ -48,61 +48,14 @@ int main ( void )
         gpioSetMode(27,PI_OUTPUT) ; //28V Rail
     }
     #endif //RPI
+	
     /* Set up interrupt handler Note: This handler comes from shflight and replaced the one that was in use. It has not been fully integrated as of yet but will be*/
+
     struct sigaction saction;
     saction.sa_handler = &catch_sigint;
     sigaction(SIGINT, &saction, NULL);
-    // initialize modules
-    for (int i = 0; i < num_init; i++)
-    {
-        int val = module_init[i]();
-        if (val < 0)
-        {
-            sherror("Error in initialization!");
-            exit(-1);
-        }
-    }
-    printf("Done init modules\n");
-    // set up threads
-    int rc[num_systems];                                         // fork-join return codes
-    pthread_t thread[num_systems];                               // thread containers
-    pthread_attr_t attr;                                         // thread attribute
-    int args[num_systems];                                       // thread arguments (thread id in this case, but can be expanded by passing structs etc)
-    void *status;                                                // thread return value
-    pthread_attr_init(&attr);                                    // initialize attribute
-    pthread_attr_setdetachstate(&attr, PTHREAD_CREATE_JOINABLE); // create threads to be joinable
-
-    for (int i = 0; i < num_systems; i++)
-    {
-        args[i] = i; // sending a pointer to i to every thread may end up with duplicate thread ids because of access times
-        rc[i] = pthread_create(&thread[i], &attr, module_exec[i], (void *)(&args[i]));
-        if (rc[i])
-        {
-            printf("[Main] Error: Unable to create thread %d: Errno %d\n", i, errno);
-            exit(-1);
-        }
-    }
-
-    pthread_attr_destroy(&attr); // destroy the attribute
-
-    for (int i = 0; i < num_systems; i++)
-    {
-        rc[i] = pthread_join(thread[i], &status);
-        if (rc[i])
-        {
-            printf("[Main] Error: Unable to join thread %d: Errno %d\n", i, errno);
-            exit(-1);
-        }
-    }
-
-    // destroy modules
-    for (int i = 0; i < num_destroy; i++)
-    {
-        module_destroy[i]();
-    }
-    return 0;
-}
-/**
+	
+   
  * @brief SIGINT handler, sets the global variable `done` as 1, so that thread loops can break.
  
  * 
@@ -116,6 +69,7 @@ void catch_sigint(int sig)
 }
     /* End set up interrupt handler */
 
+	
     /* Look for free space at init */
     if ( getcwd(curr_dir,sizeof(curr_dir)) == NULL ) //can't get pwd? Something is seriously wrong. System is shutting down.
 	{
