@@ -10,7 +10,6 @@
 #ifndef DATAVIS_EXTERN_H
 #define DATAVIS_EXTERN_h
 
-
 #include <datavis.h>
 #include <pthread.h>
 
