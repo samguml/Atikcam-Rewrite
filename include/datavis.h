@@ -9,8 +9,12 @@
 #ifndef _DATAVIS_H
 #define _DATAVIS_H
 
-
 #include <datavis_extern.h>
+
+//Macros for datavis thread
+#ifndef CCD_COOLDOWN_TIME
+#define CCD_COOLDOWN_TIME 60*1000 // in milliseconds
+#endif
 
 typedef struct {
 	uint64_t tnow ; //timestamp in ms
