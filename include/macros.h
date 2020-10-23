@@ -15,13 +15,14 @@
 #include <stdio.h>
 
 
-
-
-//End of global macros
-
 #ifndef PACK_SIZE
 #define PACK_SIZE sizeof(datavis_p)
 #endif
+typedef union{
+	datavis_p a ;
+	unsigned char buf [sizeof(datavis_p) / PACK_SIZE] [PACK_SIZE];
+} packetize ;
+packetize global_p ;
 
 //Saving FITS image
 #ifndef NOSAVEFITS
