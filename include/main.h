@@ -13,6 +13,11 @@
 #include <signal.h>
 #include <fstream.h>//
 
+//Extern defintions for logs 
+extern ofstream templog ;
+extern ofstream camlog ;
+extern ofstream errlog ;
+
 
 //extern definition of done (controls loops for all threads)
 extern volatile sig_atomic_t done;
