@@ -61,7 +61,7 @@ int main ( void )
     saction.sa_handler = &catch_sigint;
     sigaction(SIGINT, &saction, NULL);
 	
-   
+/*   
  * @brief SIGINT handler, sets the global variable `done` as 1, so that thread loops can break.
  
  * 
