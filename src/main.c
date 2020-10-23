@@ -4,7 +4,6 @@
 @brief provides threat init, spawn, join, destroy. Signal handler for all threads. Would contain error printer but that feature will be phased out 
 @Date 9/28/2020
 
-Note: Signal handler has been swapped out for the signal handler from the shflight repository. 
 **/
 #define MAIN_PRIVATE
 #include <main.h>
@@ -61,19 +60,15 @@ int main ( void )
     saction.sa_handler = &catch_sigint;
     sigaction(SIGINT, &saction, NULL);
 	
-/*   
- * @brief SIGINT handler, sets the global variable `done` as 1, so that thread loops can break.
- 
- * 
- * @param sig Receives the signal as input.
- */
+// SIGINT handler-replaced old signal handler. This signal handler is inactive, as there are no conditional wakeups in the flightcam code. 
 void catch_sigint(int sig)
 {
     done = 1;
     for (int i = 0; i < num_wakeups; i++)
         pthread_cond_broadcast(wakeups[i]);
 }
-    /* End set up interrupt handler */
+	
+ //End set up interrupt handler 
 
 	
     /* Look for free space at init */
