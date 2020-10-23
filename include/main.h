@@ -32,8 +32,9 @@ extern ofstream errlog ;
 //extern defintion of local signal handler? 
 extern overheat(int signum);
 
-//interrupt handler for sigint
-  void catch_sigint(int sig);
+
+// interrupt handler for SIGINT
+void catch_sigint(int);
 
 //function prototypes from main.c
 
