@@ -10,7 +10,10 @@
 #define _HOUSEKEEPING_H
 #include <housekeeping_extern.h>
 
-
+//Macrosfor housekeeping thread
+#ifndef CCD_COOLDOWN_TIME
+#define CCD_COOLDOWN_TIME 60*1000 // in milliseconds
+#endif
 
 //Function prototypes
 
