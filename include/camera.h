@@ -10,6 +10,7 @@
 #ifndef _CAMERA_H
 #define _CAMERA_H
 #include <camera_extern.h>
+#include <housekeeeping.h> //due to housekeeping logs
 
 
 typedef struct image {
