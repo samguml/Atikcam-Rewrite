@@ -21,6 +21,12 @@ bool gpio_status;
 char curr_dir[PATH_MAX];
 volatile sig_atomic_t done = 0;
 
+//Memory allocation for logs
+ofstream templog ;
+ofstream camlog ;
+ofstream errlog ;
+
+
 int main ( void )
 {
 	/** Error Log **/
