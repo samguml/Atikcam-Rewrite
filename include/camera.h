@@ -12,6 +12,34 @@
 #include <camera_extern.h>
 #include <housekeeeping.h> //due to housekeeping logs
 
+//Macros for CameraThread
+
+#define MAX 1
+
+#ifndef MAX_ALLOWED_EXPOSURE
+#define MAX_ALLOWED_EXPOSURE 40
+#endif
+
+#ifndef TIME_WAIT_USB
+#define TIME_WAIT_USB 1000000
+#endif
+
+#ifndef PIC_TIME_GAP
+#define PIC_TIME_GAP 10.0 // minimum gap between images in seconds
+#endif
+
+#ifndef PIX_MEDIAN
+#define PIX_MEDIAN 45000.0
+#endif
+
+#ifndef PIX_GIVE
+#define PIX_GIVE 5000.0
+#endif
+
+#ifndef PIX_BIN
+#define PIX_BIN 1
+#endif
+
 
 typedef struct image {
 	uint64_t tnow ; 
