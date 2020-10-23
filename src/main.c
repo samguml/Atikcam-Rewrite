@@ -54,7 +54,7 @@ int main ( void )
     }
     #endif //RPI
 	
-    /* Set up interrupt handler Note: This handler comes from shflight and replaced the one that was in use. It has not been fully integrated as of yet but will be*/
+  /* Set up interrupt handler Note: This handler comes from shflight and replaced the one that was in use. */
 
     struct sigaction saction;
     saction.sa_handler = &catch_sigint;
