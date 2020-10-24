@@ -60,6 +60,8 @@ typedef struct image {
 
 void convert_to_packet(image * a , datavis_p * b);
 
+unsigned long long int timenow();
+
 inline void put_data ( ostream & str , unsigned short val );
 inline void put_data ( ostream & str , unsigned long long int val );
 inline void put_data ( ostream & str , float val );
