@@ -14,6 +14,7 @@
 #include <macros.h>
 #include <chrono>
 #include <iostream>
+#include <fstream>
 #include <stdlib.h>
 #include <sys/types.h>
 
