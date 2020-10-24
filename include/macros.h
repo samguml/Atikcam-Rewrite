@@ -55,6 +55,13 @@ int save(const char *fileName, image* data)
 }
 #endif
 
+unsigned long long int timenow()
+{
+	return ((std::chrono::duration_cast<std::chrono::milliseconds> 
+	((std::chrono::time_point_cast<std::chrono::milliseconds>
+	(std::chrono::system_clock::now())).time_since_epoch())).count()) ;
+}
+
 
 //Fuction for shutting down and rebooting 
 #ifdef ENABLE_PWOFF
