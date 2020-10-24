@@ -9,6 +9,9 @@
 #ifndef MAIN_H
 #define MAIN_H
 
+#include <fstream>
+#include <signal.h>
+
 //Extern defintions for logs 
 extern ofstream templog ;
 extern ofstream camlog ;
