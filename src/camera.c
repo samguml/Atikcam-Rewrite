@@ -3,12 +3,14 @@
 @Author: Samuel Gregory (samuel_gregory@student.uml.edu)
 @brief
 @Date 9/10/2020
-@copyright Copyright (c) 2020
 **/
 #include <camera.h>
 #include <main.h>
-#include <pthread.h>
+//#include <pthread.h>
 #include <housekeeping_extern.h>
+#include <unistd.h>
+#include <fitsio.h>
+#include <sys/types.h>
 
 
 double minShortExposure = -1 ;
