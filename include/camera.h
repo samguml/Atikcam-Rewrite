@@ -10,8 +10,10 @@
 #ifndef _CAMERA_H
 #define _CAMERA_H
 #include <camera_extern.h>
-#include <housekeeeping.h> //due to housekeeping logs
+#include <housekeeeping.h> //due to housekeeping logs 
 #include <macros.h>
+#include <iostream>
+#include <string>//not sure if this is needed, but better safe than sorry
 
 //Macros for CameraThread
 
