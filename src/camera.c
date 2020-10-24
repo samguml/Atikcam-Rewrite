@@ -10,6 +10,7 @@
 #include <unistd.h>
 #include <fitsio.h>
 #include <sys/types.h>
+#include <stdio.h>
 #include <macros.h>
 
 
