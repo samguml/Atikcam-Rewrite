@@ -16,6 +16,8 @@
 #define CCD_COOLDOWN_TIME 60*1000 // in milliseconds
 #endif
 
+//Datavis structs
+
 typedef struct {
 	uint64_t tnow ; //timestamp in ms
 	float exposure ; //exposure in ms
