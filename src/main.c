@@ -1,7 +1,7 @@
 /**
 @file main.c
 @Author: Samuel Gregory (samuel_gregory@student.uml.edu)
-@brief provides threat init, spawn, join, destroy. Signal handler for all threads. Would contain error printer but that feature will be phased out 
+@brief provides threat init, spawn, join, destroy. Signal handler for all threads. Would contain error printer but that feature has been phased out 
 @Date 9/28/2020
 
 **/
