@@ -12,6 +12,7 @@
 #include <fitsio.h>
 #include <iostream>
 #include <unistd.h>
+#include <chrono>
 
 #ifndef PACK_SIZE
 #define PACK_SIZE sizeof(datavis_p)
