@@ -6,7 +6,6 @@
 **/
 #include <camera.h>
 #include <main.h>
-//#include <pthread.h>
 #include <housekeeping_extern.h>
 #include <unistd.h>
 #include <fitsio.h>
