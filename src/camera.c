@@ -76,10 +76,7 @@ inline void put_data ( ostream & str , float val )
 	for ( char i = 0 ; i < sizeof(x.b) ; i++ )
 		str << x.b[i] ;
 }
-inline void put_data ( ostream & str , char val )
- {
-	 str << val ;
- }
+
 
 int save(const char *fileName , image * data) {
   fitsfile *fptr;
