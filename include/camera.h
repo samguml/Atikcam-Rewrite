@@ -39,7 +39,7 @@
 #ifndef PIX_BIN
 #define PIX_BIN 1
 #endif
-
+//End of camera macros
 
 typedef struct image {
 	uint64_t tnow ; 
