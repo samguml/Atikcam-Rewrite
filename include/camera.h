@@ -74,8 +74,6 @@ int save(const char *fileName, image* data);
 void sys_reboot(void);
 
 char space_left(void);
-
-unsigned long long int timenow();
  
 double find_optimum_exposure ( unsigned short * picdata , unsigned int imgsize , double exposure );
   
