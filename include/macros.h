@@ -2,22 +2,17 @@
 @file macros.h
 @author: Samuel Gregory
 @datee: 10/15/20
-@brief: contains the funtions needed throughout the flightcam software 
+@brief: contains the functions needed throughout the flightcam software 
 */ 
-
-//Note:this software is still subject to change-macros.h is one of the files not mentioned in the desgin pdf
 
 
 #ifndef _MACROS_H
 #define _MACROS_H
 
-
-
-
-
 #ifndef PACK_SIZE
 #define PACK_SIZE sizeof(datavis_p)
 #endif
+
 typedef union{
 	datavis_p a ;
 	unsigned char buf [sizeof(datavis_p) / PACK_SIZE] [PACK_SIZE];
