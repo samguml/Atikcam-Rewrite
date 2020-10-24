@@ -18,14 +18,15 @@
 #define CCD_COOLDOWN_TIME 60*1000 // in milliseconds
 #endif
 
+typedef union shb { unsigned short s ; char b[sizeof(unsigned short)] ; } shb ;
 //Function prototypes
 
 
 unsigned long long int timenow();
  
-inline void put_data ( ostream & str , unsigned short val ) ;
+
 inline void put_data ( ostream & str , unsigned long long int val );
-inline void put_data ( ostream & str , float val );
+
 inline void put_data ( ostream & str , char val );
 
 void * housekeeping_thread(void *t);
