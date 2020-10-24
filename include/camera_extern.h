@@ -6,10 +6,10 @@
 */ 
 #ifndef CAMERA_EXTERN_H
 #define CAMERA_EXTERN_H
-#include <camera.h>  //This may not be necessary, but is included just in case. May be subject to change 
 
 
 
+//Extern definitons for cross module variables-Note shares variables with housekeeping thread but not with datavis thread
 extern double  minshortexposure;
 
 extern double maxshortexposure;
