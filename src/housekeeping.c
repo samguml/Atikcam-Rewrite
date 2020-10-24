@@ -8,7 +8,6 @@
 
 #include <housekeeping.h>
 #include <main.h>
-//#include <pthread.h>
 #include <camera_extern.h>
 #include <chrono>
 #include <cmath>
