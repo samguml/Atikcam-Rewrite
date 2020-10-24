@@ -3,15 +3,11 @@
  @author Samuel Gregory
  @brief extern defintions for synchronizers and variables shared across modules
  @date 10/11/20
- 
- 
- Note: This file is still needs more work than most
+
  */
 #ifndef DATAVIS_EXTERN_H
-#define DATAVIS_EXTERN_h
+#define DATAVIS_EXTERN_H
 
-#include <datavis.h>
-
-//There are no cross-module variables used by the datavis thread
+//There are no cross-module variables used by the datavis threadand no synchroinzers in the flightcam code. 
 
 #endif //DATAVIS_EXTERN_H
