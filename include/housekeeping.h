@@ -9,6 +9,7 @@
 #ifndef _HOUSEKEEPING_H
 #define _HOUSEKEEPING_H
 #include <housekeeping_extern.h>
+#include <macros.h>
 
 //Macros for housekeeping thread
 #ifndef CCD_COOLDOWN_TIME
