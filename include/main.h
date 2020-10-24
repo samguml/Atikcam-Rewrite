@@ -17,6 +17,7 @@ extern ofstream templog ;
 extern ofstream camlog ;
 extern ofstream errlog ;
 
+
 //Declaration of num_wakeups (an array used in the signal handler)
 const int num_wakeups = sizeof(wakeups) / sizeof(pthread_cond_t *);
 
