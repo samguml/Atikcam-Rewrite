@@ -9,6 +9,10 @@
 #ifndef _MACROS_H
 #define _MACROS_H
 
+#include <fitsio.h>
+#include <iostream>
+#include <unistd.h>
+
 #ifndef PACK_SIZE
 #define PACK_SIZE sizeof(datavis_p)
 #endif
