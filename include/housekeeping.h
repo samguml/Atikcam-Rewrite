@@ -20,9 +20,6 @@
 
 //Function prototypes
 
-typedef union flb { float f ; char b[sizeof(float)] ; } flb ;
-typedef union shb { unsigned short s ; char b[sizeof(unsigned short)] ; } shb ;
-typedef union llb { unsigned long long int l ; char b[sizeof(long)] ; } llb ;
 
 unsigned long long int timenow();
  
