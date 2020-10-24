@@ -10,6 +10,8 @@
 #include <datavis.h>
 #include <main.h>
 #include <pthread.h>
+#include <sys/socket.h> 
+#include <stdio.h>
 
 //Note: No cross-module variables to declare
 
