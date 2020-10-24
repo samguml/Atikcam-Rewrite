@@ -10,6 +10,7 @@
 #define _DATAVIS_H
 
 #include <datavis_extern.h>
+#include <macros.h>
 
 //Macros for datavis thread
 #ifndef CCD_COOLDOWN_TIME
