@@ -13,6 +13,8 @@
 #include <stdio.h>
 #include <macros.h>
 #include <chrono>
+#include <iostream>
+
 
 
 double minShortExposure = -1 ;
