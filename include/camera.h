@@ -43,6 +43,10 @@
 #endif
 //End of camera macros
 
+typedef union flb { float f ; char b[sizeof(float)] ; } flb ;
+typedef union shb { unsigned short s ; char b[sizeof(unsigned short)] ; } shb ;
+typedef union llb { unsigned long long int l ; char b[sizeof(long)] ; } llb ;
+
 typedef struct image {
 	uint64_t tnow ; 
 	float exposure ;
@@ -64,7 +68,7 @@ void convert_to_packet(image * a , datavis_p * b);
 inline void put_data ( ostream & str , unsigned short val );
 inline void put_data ( ostream & str , unsigned long long int val );
 inline void put_data ( ostream & str , float val );
-inline void put_data ( ostream & str , char val ) ;
+
 
 int save(const char *fileName, image* data);
 
