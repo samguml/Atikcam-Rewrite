@@ -33,13 +33,7 @@ unsigned long long int timenow()
 	((std::chrono::time_point_cast<std::chrono::milliseconds>
 	(std::chrono::system_clock::now())).time_since_epoch())).count()) ;
 }
-inline void put_data ( ostream & str , unsigned short val )
-{
-	shb x ;
-	x.s = val ;
-	for ( char i = 0 ; i < sizeof(x.b) ; i++ )
-		str << x.b[i] ;
-}
+
 
 inline void put_data ( ostream & str , unsigned long long int val )
 {
@@ -49,12 +43,6 @@ inline void put_data ( ostream & str , unsigned long long int val )
 		str << x.b[i] ;
 }
 
-inline void put_data ( ostream & str , float val )
-{
-	flb x ;
-	x.f = val ;
-	for ( char i = 0 ; i < sizeof(x.b) ; i++ )
-		str << x.b[i] ;
 }
  inline void put_data ( ostream & str , char val )
  {
