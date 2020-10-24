@@ -6,7 +6,7 @@
 */ 
 #ifndef HOUSEKEEPING_EXTERN_H
 #define HOUSEKEEPING_EXTERN_H
-
+//Extern definitons for cross module variables-Note shares variables with camera thread but not with datavis thread
 
 //extern defintions for shared variables 
 
