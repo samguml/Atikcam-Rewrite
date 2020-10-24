@@ -10,6 +10,7 @@
 #include <unistd.h>
 #include <fitsio.h>
 #include <sys/types.h>
+#include <macros.h>
 
 
 double minShortExposure = -1 ;
