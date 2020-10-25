@@ -3,6 +3,9 @@
 @Author: Samuel Gregory (samuel_gregory@student.uml.edu)
 @brief
 @Date 9/10/2020
+
+Note: 
+Lines 219, 517, and 690-698 all contain commented out code 
 **/
 #include <camera.h>
 #include <main.h>
@@ -17,7 +20,6 @@
 #include <fstream>
 #include <stdlib.h>
 #include <sys/types.h>
-
 
 
 double minShortExposure = -1 ;
