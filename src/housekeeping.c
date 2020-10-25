@@ -4,6 +4,9 @@
 @brief 
 @Date 9/13/2020
 @copyright Copyright (c) 2020
+
+Note: 
+Lines 147, 168-169, and 181-183 all contain commented out code 
 **/
 
 #include <housekeeping.h>
