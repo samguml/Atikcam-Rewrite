@@ -8,6 +8,6 @@
 #ifndef DATAVIS_EXTERN_H
 #define DATAVIS_EXTERN_H
 
-//There are no cross-module variables used by the datavis threadand no synchroinzers in the flightcam code. 
+//There are no cross-module variables used by the datavis thread and no synchroinzers in the flightcam code. 
 
 #endif //DATAVIS_EXTERN_H
