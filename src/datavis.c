@@ -4,6 +4,9 @@
 @brief This file declares all routines and allocates memory for all cross-module variables in the datavis thread
 @Date 9/13/2020
 
+Note: 
+Lines 64, 69, 71, 76, 82-83, 86, 91-93, and 96-97 all contain commented out code 
+
 **/
 
 
