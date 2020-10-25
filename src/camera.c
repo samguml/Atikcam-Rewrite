@@ -5,7 +5,7 @@
 @Date 9/10/2020
 
 Note: 
-Lines 219, 517, and 690-698 all contain commented out code 
+Lines 219, 248, 517, and 690-698 all contain commented out code 
 **/
 #include <camera.h>
 #include <main.h>
