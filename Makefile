@@ -1,4 +1,4 @@
-//Note: This is a copy of the Makefile from shflight. This is NOT original work. It is being used for reference only!
+#Note: This is a copy of the Makefile from shflight. This is NOT original work. It is being used for reference only!
 CC=gcc
 RM= /bin/rm -vf
 PYTHON=python3
