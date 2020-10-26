@@ -12,7 +12,7 @@
 #include <camera_extern.h>
 #include <macros.h>
 #include <iostream>
-#include <string>//not sure if this is needed, but better safe than sorry
+
 
 //Macros for CameraThread
 
