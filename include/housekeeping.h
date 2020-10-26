@@ -11,7 +11,6 @@
 #include <housekeeping_extern.h>
 #include <macros.h>
 #include <iostream>
-#include <string>//not sure if this is needed, but better safe than sorry
 
 //Macros for housekeeping thread
 #ifndef CCD_COOLDOWN_TIME
