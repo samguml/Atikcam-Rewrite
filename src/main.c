@@ -13,7 +13,16 @@
 #include <errno.h>
 #include <pthread.h>
 #include <signal.h>
-
+#include <pigpio.h>
+# include <fstream>
+#include <sys/types.h>
+#include <ofstream>
+#include <boost/filesystem.hpp>
+#include <unistd.h>
+#include <stdio.h>
+#include <errno.h>
+#include <linux/reboot.h>
+#include <sys/reboot.h>
 
 bool gpio_status;
 char curr_dir[PATH_MAX];
