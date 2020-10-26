@@ -10,16 +10,20 @@ Lines 154, 219, 248, 517, and 690-698 all contain commented out code
 #include <camera.h>
 #include <main.h>
 #include <housekeeping_extern.h>
+#include <macros.h>
 #include <unistd.h>
 #include <fitsio.h>
 #include <sys/types.h>
 #include <stdio.h>
-#include <macros.h>
+#include <signal.h>
+#include <string.h>
+#include <omp.h>
 #include <chrono>
 #include <iostream>
 #include <fstream>
 #include <stdlib.h>
-#include <sys/types.h>
+#include <cmath>
+#include <pthread.h>
 
 
 double minShortExposure = -1 ;
