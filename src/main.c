@@ -165,18 +165,6 @@ void catch_sigint(int sig)
 }
 
 
-void overheat(int signum)
-{
-	#ifdef RPI
-	gpioWrite(17,0);
-	#endif
-	camofftime = timenow() ;
-    ccdoverheat = true ;
-	cam_off = true ;
-    cerr << "Interrupt Handler: Received Signal: 0x" << hex << signum << dec << endl ;
-    return ;
-}
-
 #ifdef ENABLE_PWOFF
 void sys_poweroff(void)
 {
