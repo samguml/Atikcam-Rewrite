@@ -9,6 +9,7 @@
 #include <main.h>
 #include <modules.h>
 #undefine MAIN_PRIVATE
+#include <cstdlib>
 #include <stdlib.h>
 #include <errno.h>
 #include <pthread.h>
