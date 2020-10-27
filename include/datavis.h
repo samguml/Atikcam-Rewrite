@@ -12,6 +12,7 @@
 #include <datavis_extern.h>
 #include <macros.h>
 #include <unistd.h>
+#include <sys/socket.h> 
 
 //Macros for datavis thread
 #ifndef CCD_COOLDOWN_TIME
