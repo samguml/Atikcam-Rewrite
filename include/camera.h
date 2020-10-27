@@ -12,7 +12,7 @@
 #include <camera_extern.h>
 #include <macros.h>
 #include <iostream>
-
+#include <atikccdusb.h>
 
 //Macros for CameraThread
 
