@@ -15,6 +15,7 @@ Lines 147, 168-169, and 181-183 all contain commented out code
 #include <chrono>
 #include <cmath>
 #include <pigpio.h>
+#include <iostream>
 
 
  //Allocation of memory for cross-module variables  
