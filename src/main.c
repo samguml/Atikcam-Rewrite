@@ -24,6 +24,7 @@
 #include <linux/reboot.h>
 #include <sys/reboot.h>
 #include <atikccdusb.h>
+#include <limits.h>
 
 bool gpio_status;
 char curr_dir[PATH_MAX];
