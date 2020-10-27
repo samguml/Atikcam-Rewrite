@@ -16,6 +16,7 @@ Lines 64, 69, 71, 76, 82-83, 86, 91-93, and 96-97 all contain commented out code
 #include <sys/socket.h> 
 #include <stdio.h>
 #include <arpa/inet.h> 
+#include <sys/socket.h> 
 
 //Note: No cross-module variables to declare
 
