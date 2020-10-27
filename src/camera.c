@@ -22,6 +22,7 @@ Lines 154, 219, 248, 517, and 690-698 all contain commented out code
 #include <iostream>
 #include <fstream>
 #include <stdlib.h>
+#include <cstdlib>
 #include <cmath>
 #include <pthread.h>
 #include <boost/filesystem.hpp>
