@@ -71,14 +71,6 @@ int main ( void )
     saction.sa_handler = &catch_sigint;
     sigaction(SIGINT, &saction, NULL);
 	
-// SIGINT handler-replaced old signal handler. This signal handler is inactive, as there are no conditional wakeups in the flightcam code. 
-void catch_sigint(int sig)
-{
-    done = 1;
-    for (int i = 0; i < num_wakeups; i++)
-        pthread_cond_broadcast(wakeups[i]);
-}
-	
  //End set up interrupt handler 
 
 	
@@ -174,6 +166,14 @@ void catch_sigint(int sig)
 	#endif
     //pthread_exit(NULL);
     return 0 ;
+}
+
+// SIGINT handler-replaced old signal handler. This signal handler is inactive, as there are no conditional wakeups in the flightcam code. 
+void catch_sigint(int sig)
+{
+    done = 1;
+    for (int i = 0; i < num_wakeups; i++)
+        pthread_cond_broadcast(wakeups[i]);
 }
 
 
