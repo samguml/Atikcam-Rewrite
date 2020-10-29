@@ -25,13 +25,6 @@ clean:
   rm -f $(ODIR)/*.o *~ core $(INCDIR)/*~
   
   
-
-%.o: %.c $(DEPS)
-  $(CC) -c -o $@ $< $(CFLAGS)
-
-atikcameramake: $(OBJ)
-  $(CC) -o $@ $^ $(CFLAGS)
-  
   
   
   
