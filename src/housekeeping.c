@@ -16,6 +16,8 @@ Lines 147, 168-169, and 181-183 all contain commented out code
 #include <cmath>
 #include <pigpio.h>
 #include <iostream>
+#include <libmcp9808.h>
+#include <libads1115.h>
 
 
  //Allocation of memory for cross-module variables  
