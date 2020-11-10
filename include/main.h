@@ -12,6 +12,7 @@
 #include <fstream>
 #include <signal.h>
 
+using std::ofstream;
 //Extern defintions for logs 
 extern ofstream templog ;
 extern ofstream camlog ;
@@ -19,13 +20,13 @@ extern ofstream errlog ;
 
 
 //Declaration of num_wakeups (an array used in the signal handler)
-const int num_wakeups = sizeof(wakeups) / sizeof(pthread_cond_t *);
+extern const int num_wakeups = sizeof(wakeups) / sizeof(pthread_cond_t *);
 
 //extern definition of done (controls loops for all threads)
 extern volatile sig_atomic_t done;
 
 //extern defintion of local signal handler? 
-extern overheat(int signum);
+void overheat(int signum);
 
 // interrupt handler for SIGINT
 void catch_sigint(int);

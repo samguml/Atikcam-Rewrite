@@ -12,7 +12,7 @@
 #include <camera_extern.h>
 #include <macros.h>
 #include <iostream>
-#include <atikccdusb.h>
+//#include <atikccdusb.h>
 
 //Macros for CameraThread
 
@@ -42,24 +42,6 @@
 #define PIX_BIN 1
 #endif
 //End of camera macros
-
-typedef union flb { float f ; char b[sizeof(float)] ; } flb ;
-typedef union shb { unsigned short s ; char b[sizeof(unsigned short)] ; } shb ;
-typedef union llb { unsigned long long int l ; char b[sizeof(long)] ; } llb ;
-
-typedef struct image {
-	uint64_t tnow ; 
-	float exposure ;
-	unsigned short pixx ; 
-	unsigned short pixy ; 
-    unsigned int imgsize ; 
-    short ccdtemp ; 
-    short boardtemp ;
-    short chassistemp ;
-	unsigned short picdata[1449072] ;
-	unsigned char unused[6] ; 
-	unsigned char unused2[1792] ; //padding to round off to 708*4096 bytes
-} image ; //size 708*4096
 
 //Function prototypes are as follows
 

@@ -9,14 +9,52 @@
 #ifndef _MACROS_H
 #define _MACROS_H
 
-#include <fitsio.h>
+//#include <fitsio.h>
+#include <main.h>//main.h holds extern definitons for logs
 #include <iostream>
 #include <unistd.h>
 #include <chrono>
 
+using namespace std;
+
+
+typedef union flb { float f ; char b[sizeof(float)] ; } flb ;
+typedef union shb { unsigned short s ; char b[sizeof(unsigned short)] ; } shb ;
+typedef union llb { unsigned long long int l ; char b[sizeof(long)] ; } llb ;
+
+/* Internal data structure */
+typedef struct image {
+	uint64_t tnow ; // timestamp in ms (from epoch, in local time)
+	float exposure ; //exposure length in seconds
+	unsigned short pixx ; //pixel x
+	unsigned short pixy ; //pixel y
+    unsigned int imgsize ; //pixx*pixy
+    short ccdtemp ; // temp in C = temp/100
+    short boardtemp ;
+    short chassistemp ;
+	unsigned short picdata[1449072] ;
+	unsigned char unused[6] ; //first set of padding, default for GCC -> multiple of 32
+	unsigned char unused2[1792] ; //padding to round off to 708*4096 bytes
+} image ; //size 708*4096
+/* End internal data structure */
+
+typedef struct {
+	uint64_t tnow ; //timestamp in ms
+	float exposure ; //exposure in ms
+	unsigned short pixx ; //348
+	unsigned short pixy ; //260
+	unsigned char pixbin ;
+	short ccdtemp ; // temp in C * 100
+	short boardtemp ;
+	short chassistemp ;
+	unsigned char picdata[90480];
+} datavis_p ;
+
 #ifndef PACK_SIZE
 #define PACK_SIZE sizeof(datavis_p)
 #endif
+
+
 
 typedef union{
 	datavis_p a ;
@@ -59,6 +97,8 @@ int save(const char *fileName, image* data)
 	return false;
 }
 #endif
+
+
 
 unsigned long long int timenow()
 {

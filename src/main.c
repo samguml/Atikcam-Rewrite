@@ -8,15 +8,16 @@
 #define MAIN_PRIVATE
 #include <main.h>
 #include <modules.h>
-#undefine MAIN_PRIVATE
 #include <cstdlib>
 #include <stdlib.h>
 #include <pthread.h>
 #include <signal.h>
+#ifdef RPI
 #include <pigpio.h>
-# include <fstream>
+#endif
 #include <sys/types.h>
-#include <ofstream>
+#include <fstream>
+#include <iostream>
 #include <boost/filesystem.hpp>
 #include <unistd.h>
 #include <stdio.h>
@@ -25,6 +26,11 @@
 #include <sys/reboot.h>
 #include <atikccdusb.h>
 #include <limits.h>
+
+using std::boost;
+using std::ios;
+using std::endl;
+using std::cerr;
 
 bool gpio_status;
 char curr_dir[PATH_MAX];
@@ -49,7 +55,7 @@ int main ( void )
 	{
 		cerr << "Error: Unable to open error log stream." << endl ;
 	}
-    /***************/
+    /*************/
     /* Setup GPIO */
     gpio_status = false;
     #ifdef RPI

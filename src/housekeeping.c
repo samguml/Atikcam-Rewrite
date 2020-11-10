@@ -3,7 +3,6 @@
 @Author: Samuel Gregory (samuel_gregory@student.uml.edu)
 @brief 
 @Date 9/13/2020
-@copyright Copyright (c) 2020
 
 Note: 
 Lines 147, 168-169, and 181-183 all contain commented out code 
@@ -33,14 +32,6 @@ volatile bool ccdoverheat = false;
 
 //Routine declarations
 
-unsigned long long int timenow()
-{
-	return ((std::chrono::duration_cast<std::chrono::milliseconds> 
-	((std::chrono::time_point_cast<std::chrono::milliseconds>
-	(std::chrono::system_clock::now())).time_since_epoch())).count()) ;
-}
-
-
 inline void put_data ( ostream & str , unsigned long long int val )
 {
 	llb x ;
@@ -49,7 +40,7 @@ inline void put_data ( ostream & str , unsigned long long int val )
 		str << x.b[i] ;
 }
 
-}
+
  inline void put_data ( ostream & str , char val )
  {
 	 str << val ;

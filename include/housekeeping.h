@@ -17,7 +17,7 @@
 #define CCD_COOLDOWN_TIME 60*1000 // in milliseconds
 #endif
 
-typedef union shb { unsigned short s ; char b[sizeof(unsigned short)] ; } shb ;
+
 //Function prototypes
 
 

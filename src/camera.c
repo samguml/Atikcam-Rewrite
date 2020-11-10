@@ -7,6 +7,7 @@
 Note: 
 Lines 154, 219, 248, 517, and 690-698 all contain commented out code 
 **/
+
 #include <camera.h>
 #include <main.h>
 #include <housekeeping_extern.h>
@@ -26,6 +27,8 @@ Lines 154, 219, 248, 517, and 690-698 all contain commented out code
 #include <cmath>
 #include <pthread.h>
 #include <boost/filesystem.hpp>
+
+static AtikCamera *devices[MAX] ;
 
 double minShortExposure = -1 ;
 
@@ -113,7 +116,7 @@ int save(const char *fileName , image * data) {
     cerr << endl << "Camera Thread: Save: saved to " << fileName << endl << endl;
 	#endif
   }
-  
+} 
 #ifdef ENABLE_REBOOT
 void sys_reboot(void)
 {
@@ -128,6 +131,7 @@ void sys_reboot(void)
 	cerr << "Info: Reboot instruction received!" << endl ;
 }
 #endif //ENABLE_REBOOT
+
   
 char space_left(void)
 {
@@ -302,8 +306,7 @@ bool snap_picture ( AtikCamera * device , unsigned pixX , unsigned pixY , unsign
 }
 
 //Main routine
-void * camera_thread(void *t)
-{
+void * camera_thread(void *t){
     /** Atik Camera Temperature Log **/
 	#ifndef TEMPLOG_LOCATION
 	#define TEMPLOG_LOCATION "/home/pi/temp_log.bin"
@@ -629,7 +632,7 @@ void * camera_thread(void *t)
 						if ( omp_get_thread_num( ) == 0 ) //first thread to take pictures
 						{	
 							tnow = timenow() ;
-							success1 = snap_picture ( device, pixelCX, pixelCY, picdata, exposure ) ;
+							success1 = snap_picture (device, pixelCX, pixelCY, picdata, exposure) ;
 							#ifdef SK_DEBUG
 							cerr << "Info: Loop: Long: " << tnow << " obtained image." << endl ;
 							#endif
@@ -763,4 +766,5 @@ void * camera_thread(void *t)
 	templog.close() ;
 	errlog .close() ;
     pthread_exit(NULL) ;
+  
 }
