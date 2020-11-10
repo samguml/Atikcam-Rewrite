@@ -19,19 +19,13 @@
 #define CCD_COOLDOWN_TIME 60*1000 // in milliseconds
 #endif
 
+#ifndef PORT
+#define PORT 12376
+#endif //PORT
+
 //Datavis structs
 
-typedef struct {
-	uint64_t tnow ; //timestamp in ms
-	float exposure ; //exposure in ms
-	unsigned short pixx ; //348
-	unsigned short pixy ; //260
-	unsigned char pixbin ;
-	short ccdtemp ; // temp in C * 100
-	short boardtemp ;
-	short chassistemp ;
-	unsigned char picdata[90480];
-} datavis_p ;
+
 
 typedef struct sockaddr sk_sockaddr; 
 
